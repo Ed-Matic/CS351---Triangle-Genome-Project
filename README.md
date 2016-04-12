@@ -4,5 +4,5 @@ To run program from Eclipse, run the MainProgram.java.
 To run the Runnable JAR file, Run Project 2 - Triangle Genome Project.jar file
 
 Contributors:
-  Ederin Igharoro
+  Ederin Igharoro,
   Brian Downing
