@@ -179,15 +179,15 @@ public class Genome implements Comparable<Genome>
   }
 
   /*****************************************
-   * public int getGene()
+   * public int getGene(int n)
    * 
-   * no Parameters
+   * int
    * 
-   * gene of the genome
+   * get gene of the genome
    * 
    * Method's return value: Int. returns the gene value
    * 
-   * This method gets the width of the genome
+   * This method gets the gene of the genome
    * 
    * Method's Algorithm: triangles.get(n / 10).getGene(n % 10)
    ******************************************/
@@ -196,12 +196,19 @@ public class Genome implements Comparable<Genome>
     return triangles.get(n / 10).getGene(n % 10);
   }
 
-  /**
-   * Set a gene
+  /*****************************************
+   * public void setGene(int n, int value)
    * 
-   * @param n gene to set
-   * @param value value to set
-   */
+   * int
+   * 
+   * set gene of the genome
+   * 
+   * Method's return value: Void
+   * 
+   * This method sets the gene of the genome
+   * 
+   * Method's Algorithm: triangles.get(n / 10).setGene(n % 10,value)
+   ******************************************/
   public void setGene(int n, int value)
   {
     triangles.get(n / 10).setGene(n % 10, value);
@@ -214,30 +221,57 @@ public class Genome implements Comparable<Genome>
    * @param delta how much
    * @return true if yes
    */
+  /*****************************************
+   * public boolean canChange(int n, int delta)
+   * 
+   * int
+   * 
+   * can change: true/false
+   * 
+   * Method's return value: Bool. returns true of false
+   * 
+   * This method checks if a gene can change
+   * 
+   * Method's Algorithm: triangles.get(n / 10).canChange(n % 10)
+   ******************************************/
   public boolean canChange(int n, int delta)
   {
     return triangles.get(n / 10).canChange(n % 10, delta);
 
   }
 
-  /**
-   * change a gene
+  /*****************************************
+   * public void changeGene(int n, int delta)
    * 
-   * @param n gene to change
-   * @param delta how much
-   */
+   * int
+   * 
+   * can change: true/false
+   * 
+   * Method's return value: Void
+   * 
+   * This method changes a gene
+   * 
+   * Method's Algorithm: triangles.get(n / 10).changeGene(n % 10) int n : gene
+   * to change int delta: how much
+   ******************************************/
   public void changeGene(int n, int delta)
   {
     triangles.get(n / 10).changeGene(n % 10, delta);
   }
 
-  /**
-   * May not be correct, gets the bounding rectangle for a triangle that has
-   * gene
+  /*****************************************
+   * public int[] getGeneBoundingRect(int n)
    * 
-   * @param n gene
-   * @return return rect
-   */
+   * int
+   * 
+   * get gene bounding rectangle
+   * 
+   * Method's return value: int[]. returns rect
+   * 
+   * This method gets the bounding rectangle for a triangle that has gene
+   * 
+   * Method's Algorithm: triangles.get(n / 10).getBoundingRect() int n : gene
+   ******************************************/
   public int[] getGeneBoundingRect(int n)
   {
 

@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import mainPackage.Constants;
 
 /**
- * Simple image panel, draws a buffered image to the screen and loads the image
+ * Simple image panel, draws a buffered image to the screen, loads the image
  * from a url
  *
  */
@@ -55,10 +55,10 @@ public class ImagePanel extends JPanel
    * Draws image to screen
    */
   @Override
-  protected void paintComponent(Graphics graphics)
+  protected void paintComponent(Graphics g)
   {
-    super.paintComponent(graphics);
-    graphics.drawImage(image, 0, 0, null);
+    super.paintComponent(g);
+    g.drawImage(image, 0, 0, null);
   }
 
   /**
@@ -115,9 +115,9 @@ public class ImagePanel extends JPanel
     this.width = width;
     this.height = height;
     image = new BufferedImage(width, height, Constants.BUF_IMG_TYPE);
-    Graphics graphics = image.getGraphics();
-    graphics.setColor(Color.white);
-    graphics.fillRect(0, 0, width, height);
+    Graphics g = image.getGraphics();
+    g.setColor(Color.white);
+    g.fillRect(0, 0, width, height);
     setPreferredSize(new Dimension(width, height));
   }
 }
